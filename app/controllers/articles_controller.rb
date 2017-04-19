@@ -4,13 +4,25 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.all
+    if !params.key?("q")
+      @articles = Article.all
+    else 
+      @articles = Article.where("lower(title) LIKE '%#{params[:q].downcase}%'" )
+    end
+    @params = params
     @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
   end
 
   # GET /articles/1
   # GET /articles/1.json
   def show
+
+    article = Article.find(params[:id])
+    article.views_count = article.views_count == nil ? 1 : article.views_count+1
+    article.save
+    @article = article
+
+    @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
   end
 
   # GET /articles/new

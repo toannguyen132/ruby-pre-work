@@ -2,11 +2,34 @@
 <html>
 <head>
   <title>Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header class="navbar navbar-light navbar-toggleable-md bd-navbar">
+    <div class="container">
+      <div class="d-flex justify-content-between hidden-lg-up">
+        <a class="navbar-brand" href="/">
+          Blog
+        </a>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#bd-main-nav" aria-controls="bd-main-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse" id="bd-main-nav" aria-expanded="false">
+        <ul class="nav navbar-nav">
+          <li class="nav-item">
+            <%= link_to 'Homepage', '/', class: "nav-item nav-link"%>
+          </li>
+          <li class="nav-item <%= params[:controller] == 'articles' ? 'active' : '' %>">
+            <%= link_to 'Posts', articles_path, class: "nav-item nav-link"%>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
 
 <%= yield %>
 
