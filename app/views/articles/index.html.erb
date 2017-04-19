@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+  <h1>My blogs</h1>
+  <h3>My first rails application for CoderSchool</h3>
+  
+
+  <%= render @articles %>
+<!-- 
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Body</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <% @articles.each do |article| %>
+        <tr>
+          <td><%= article.title %></td>
+          <td><%= article.body %></td>
+          <td><%= link_to 'Show', article %></td>
+          <td><%= link_to 'Edit', edit_article_path(article) %></td>
+          <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table> -->
+  
+  <br>
+  
+  <%= link_to 'New Article', new_article_path %>
+</div>
