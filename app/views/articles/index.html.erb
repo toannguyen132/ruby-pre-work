@@ -1,6 +1,9 @@
-<p id="notice"><%= notice %></p>
-
 <div class="container">
+  <% if notice.present? %>
+    <div class="alert alert-success" role="alert">
+      <%= notice %>
+    </div>
+  <% end %>
   <h1>My blogs</h1>
   <h3>My first rails application for CoderSchool</h3>
   <div>
