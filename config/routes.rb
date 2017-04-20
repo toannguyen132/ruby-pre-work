@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   # get 'comments/new'
   # post 'comments/new' => 'comments#create'
 
+  root 'articles#index'
+
   resources :articles do
     resources :comments
   end

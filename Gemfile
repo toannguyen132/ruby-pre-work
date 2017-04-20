@@ -34,6 +34,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'bootstrap', '~> 4.0.0.alpha1'
 gem 'redcarpet'
+gem 'rails_12factor', group: :production
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
