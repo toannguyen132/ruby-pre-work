@@ -4,18 +4,36 @@
       <%= notice %>
     </div>
   <% end %>
-  <h1>My blogs</h1>
+  <h1>
+    My blogs <%= link_to 'New Article', new_article_path, class: 'btn btn-secondary' %>
+    
+  </h1>
   <h3>My first rails application for CoderSchool</h3>
   <div>
     <form action="" class="form-inline mb-3">
       <input class="form-control mr-3" type="text" name='q' class="search" value="<%= @params.key?(:q) ? @params[:q] : '' %>">
-      <button class="btn btn-default" type="submit">Search</button>
+      <button class="btn btn-default mr-3" type="submit">Search</button>
+      <%= @params.key?(:q) ? (link_to 'Clear Search', articles_path) : '' %>
     </form>
   </div>
 
-  <%= render @articles %>
+  <div class="row">
+    <div class="col-sm-8">
+      <%= render @articles %>
+    </div>
+    <div class="col-sm-4">
+      <div class="widget">
+        <h3>Tags:</h3>
+        <ul>
+          <% @tags.each do |tag| %>
+            <li><%= link_to tag.name, tag %></li>   
+          <% end %>
+         </ul>
+      </div>
+    </div>
+  </div>
   
   <br>
   
-  <%= link_to 'New Article', new_article_path %>
+  
 </div>

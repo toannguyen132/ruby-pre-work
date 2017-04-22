@@ -5,6 +5,9 @@ Rails.application.routes.draw do
 
   root 'articles#index'
 
+  # get 'tag/:id' => 'tags#show'
+  resources :tags
+
   resources :articles do
     resources :comments
   end

@@ -1,1 +1,20 @@
 @import 'bootstrap';
+
+.navbar{
+  background: #f8f8f8;
+  margin-bottom: 20px;
+}
+
+.widget{
+  padding: 15px;
+  h3{
+    font-size: 20px;
+  }
+  ul{
+    list-style: none;
+    list-style-image: none;
+    list-style-position: outside;
+    padding-left: 0;
+
+  }
+}
