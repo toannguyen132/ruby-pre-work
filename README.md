@@ -5,13 +5,13 @@
 > - remove the `README.rdoc` file that Rails generates. 
 > - remove all the HINT blocks in this file.
 
-**Name of your app** is a Ruby on Rails blog application.
+blog is a Ruby on Rails blog application.
 
 Submitted by: Toan Nguyen
 
-Time spent: **X** hours spent in total
+Time spent: 12
 
-URL: **Insert your Heroku URL here**
+URL: https://pure-hollows-68807.herokuapp.com/
 
 ## User Stories
 
