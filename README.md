@@ -9,15 +9,13 @@ blog is a Ruby on Rails blog application.
 
 Submitted by: Toan Nguyen
 
-Time spent: 12
+Time spent: 15
 
 URL: https://pure-hollows-68807.herokuapp.com/
 
 ## User Stories
 
 The following **required** functionality is complete:
-
-> HINT: mark the items you completed with [x]
 
 * [x] User can create a new post, formatted using the Markdown language.
 * [x] User can edit an existing post.
@@ -32,8 +30,6 @@ The following **optional** features are implemented:
 * [x] User can leave a comment on a post.
 * [x] User can add "tags" to a post, and filter posts by tag. 
 
-> HINT: if you are unsure how to implement the Search feature, you can Google how to implement a simple search form. For example, one of the sites you will find is [this](http://www.jorgecoca.com/buils-search-form-ruby-rails/)
-
 The following **additional** features are implemented:
 
 - [ ] List anything else that you can get done to improve the app functionality!
@@ -42,17 +38,16 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-> HINT: You can put a `walkthrough.gif` file in your project folder, add to git, and use the following syntax to embed it:  
-> `![Video Walkthrough](walkthrough.gif)` 
-> 
-
-![Video Walkthrough](/path/to/your/gif/file)
+![Video Walkthrough](./walkthrough.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
 Describe any challenges encountered while building the app.
+
+* I was not familiar with generating with rails, therefore I have a litle problem with create model tag & comment and connect them to article
+* I was confused when saving tag. It always created new tag every time I save an article.
 
 ## License
 
